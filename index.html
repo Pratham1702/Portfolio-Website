@@ -10,19 +10,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/df9bfde84a.js" crossorigin="anonymous"></script> 
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
                 <h1>Portfo<span>lio</span></h1>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <h4>Hello, my name is</h4>
@@ -73,6 +76,102 @@
         </div>
     </div>
     
+    <!-- ------------------------Services--------------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, ipsam ab libero id eaque eius saepe atque molestiae nulla expedita obcaecati architecto culpa voluptatum cupiditate! Asperiores ipsum harum facilis quaerat.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis consectetur maiores esse, id suscipit debitis impedit consequuntur cupiditate laboriosam est aliquid quibusdam repudiandae unde eligendi quo fuga quisquam nulla soluta?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi itaque praesentium, nisi est hic ratione vel quaerat nostrum! Aut rerum id qui itaque enim nihil magni similique laboriosam. Debitis, sed.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------------Portfolio--------------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>App 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius rem voluptatibus inventore quod ipsum velit ut hic provident molestias repellendus cumque nobis harum, maiores a fugiat dicta, amet veniam non!</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>App 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nemo sint consequatur quaerat possimus nobis, qui, reiciendis suscipit deleniti ipsa, aperiam nam consectetur natus eos facere alias? Voluptate, in modi?</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>App 3</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus, possimus perferendis iure suscipit hic, obcaecati voluptas sequi sunt voluptatem pariatur repudiandae! Cum accusantium aperiam aliquid aliquam eveniet earum molestiae.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- -------------------------Contact------------------------ -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> prathamgoyal171002@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 8279833501</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Pratham1702"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.instagram.com/_.pratham_goyal._/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/Pratham05151785"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/pratham-goyal-964252231/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/Resume.pdf"Download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &#169;. Made by Pratham</p>
+        </div>
+    </div>
+
     <script src="myscripts.js"></script>
 
 </body>
